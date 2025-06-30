@@ -1,0 +1,248 @@
+/*Page Styling*/
+html{
+    font-family: 'fira Sans', sans-serif;
+    font-size: 20px;
+    letter-spacing:0.8px;
+    min-height: 100vh;
+    color: #ffffff;
+    background-image: url('Images/orangeBackGround.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+h1{
+    margin: 0 auto 10px auto;
+    color: #d8e9ef;
+    text-align: center;
+}
+
+p{
+    margin:0;
+}
+
+button{
+    font-size: 80%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    background: none;
+    outline: none;
+    color: #d8e9ef;
+}
+button:hover{
+    color: #333435;
+}
+
+*{box-sizing: border-box;}
+/*--------------------------*/
+
+/*Input box Styling*/
+.timer-input{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius:20px;
+    padding: 30px;
+    margin-bottom: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.input-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom:25px;
+    flex-wrap: wrap;
+}
+
+.time-input{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.time-input label{
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.9;
+    color: white;
+}
+
+.time-input input{
+    width: 70px;
+    height: 50px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    text-align: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.controls button {
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.controls button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #111;
+}
+/*---------------------------------*/
+
+/* Preset buttons */
+.presets{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.preset-btn{
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+.preset-btn:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(0.1px);
+}
+/*---------------*/
+
+
+/*Timer Section */
+.countdown{
+    margin: 100px auto;
+    width:50%;
+    display: flex;
+    gap: 30px;
+    font-family: sans-serif;
+    justify-content: center;
+}
+
+.time-section{
+    text-align: center;
+    font-size: 30px;
+}
+
+.time-group{
+    display: flex;
+    gap: 10px;
+}
+
+.time-segment{
+    display: block;
+    font-size: 100px;
+    font-weight: 900;
+    width: 100px;
+}
+
+.segment-display{
+    position: relative;
+    height:100%;
+
+}
+
+.segment-display-top, .segment-display-bottom{
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    height:50%;
+    position: relative;
+}
+
+.segment-display-top{
+    background-color:#111;
+    color:#eee;
+    line-height: 1.5;
+}
+
+.segment-display-bottom{
+    line-height: 0;
+    color: #fff;
+    background-color: #333;
+}
+
+.segment-overlay{
+    position: absolute;
+    top:0;
+    perspective: 400px;
+    height:100%;
+    width: 100px;
+}
+
+.segment-overlay-top, .segment-overlay-bottom{
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+}
+
+.segment-overlay-top{
+    top:0;
+    line-height:1.5;
+    color:#fff;
+    background-color: #111;
+    transform-origin: bottom;
+}
+
+.segment-overlay-bottom{
+    bottom:0;
+    line-height: 0;
+    color:#eee;
+    background-color: #333;
+    border-top: 2px solid black;
+    transform-origin: top;
+}
+
+.segment-overlay.flip .segment-overlay-top{
+    animation: flip-top 0.8s linear;
+}
+
+.segment-overlay.flip .segment-overlay-bottom{
+    animation: flip-bottom 0.8s linear;
+}
+
+/*Animation Section*/
+@keyframes flip-top{
+    0%{
+        transform: rotateX(0deg);
+    }
+    50%,100%{ 
+        transform:rotateX(-90deg);
+    } 
+}
+@keyframes flip-bottom{
+    0%, 50%{
+        transform: rotateX(90deg);
+    }
+    100%{ 
+        transform:rotateX(0deg);
+    } 
+} 
+/*----------------*/

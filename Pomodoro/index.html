@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>FlipClockTimer</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="FlipClockTimer">
+        <meta name="author" content="Lorenzo">
+        <link rel="stylesheet" href="./style.css">
+        <!--Font Imports-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=EG+Garamond:wght@400;500;600;700&family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    </head>
+
+    <body>
+        <main>
+            <h1>Flip-Clock-Timer</h1>
+            <div class="countdown">
+                <!--Hours-->
+                <div class="time-section" id="hours">
+                    <div class="time-group">
+                        <div class="time-segment">
+                            <div class="segment-display">
+                                <div class="segment-display-top"></div>
+                                <div class="segment-display-bottom"></div>
+                                <div class="segment-overlay">
+                                    <div class="segment-overlay-top"></div>
+                                    <div class="segment-overlay-bottom"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="time-segment">
+                            <div class="segment-display">
+                                <div class="segment-display-top"></div>
+                                <div class="segment-display-bottom"></div>
+                                <div class="segment-overlay">
+                                    <div class="segment-overlay-top"></div>
+                                    <div class="segment-overlay-bottom"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Hours</p>
+                </div>
+
+                <!--Minutes-->
+                <div class="time-section" id="minutes">
+                    <div class="time-group">
+                        <div class="time-segment">
+                            <div class="segment-display">
+                                <div class="segment-display-top"></div>
+                                <div class="segment-display-bottom"></div>
+                                <div class="segment-overlay">
+                                    <div class="segment-overlay-top"></div>
+                                    <div class="segment-overlay-bottom"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="time-segment">
+                            <div class="segment-display">
+                                <div class="segment-display-top"></div>
+                                <div class="segment-display-bottom"></div>
+                                <div class="segment-overlay">
+                                    <div class="segment-overlay-top"></div>
+                                    <div class="segment-overlay-bottom"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Minutes</p>
+                </div>
+
+                <!--Seconds-->
+                <div class="time-section" id="seconds">
+                    <div class="time-group">
+                        <div class="time-segment">
+                            <div class="segment-display">
+                                <div class="segment-display-top"></div>
+                                <div class="segment-display-bottom"></div>
+                                <div class="segment-overlay">
+                                    <div class="segment-overlay-top"></div>
+                                    <div class="segment-overlay-bottom"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="time-segment">
+                            <div class="segment-display">
+                                <div class="segment-display-top"></div>
+                                <div class="segment-display-bottom"></div>
+                                <div class="segment-overlay">
+                                    <div class="segment-overlay-top"></div>
+                                    <div class="segment-overlay-bottom"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Seconds</p>
+                </div>
+            </div>
+            
+            <!--Input box-->
+            <div class="timer-input">
+                <div class="input-group">
+                    <div class="time-input">
+                        <label>Hours</label>
+                        <input type="number" id="input-hours" min="0" max="99" placeholder="00">
+                    </div>
+                    <span class="seperator">:</span>
+                    <div class="time-input">
+                        <label>Minutes</label>
+                        <input type="number" id="input-minutes" min="0" max="99" placeholder="00">
+                    </div>
+                    <span class="seperator">:</span>
+                    <div class="time-input">
+                        <label>Seconds</label>
+                        <input type="number" id="input-seconds" min="0" max="99" placeholder="00">
+                    </div>
+                </div>
+
+                <div class="presets">
+                    <button class="preset-btn" onclick="setPreset(0,5,0)">5 minutes</button>
+                    <button class="preset-btn" onclick="setPreset(0,15,0)">15 minutes</button>
+                    <button class="preset-btn" onclick="setPreset(0,25,0)">25 minutes</button>
+                    <button class="preset-btn" onclick="setPreset(1,0,0)">1 hours</button>
+                </div>
+                <div class="controls">
+                    <button class="startButton" onclick="startTimer()">Start Timer</button>
+                    <button class="pauseButton" onclick="pauseTimer()" id="pauseButton" disabled>Pause</button>
+                    <button class="resetButton" onclick="resetTimer()">Reset</button>
+                </div>
+            </div>
+        </main>
+        <script src="./pomo.js"></script>
+    </body>
+</html>
